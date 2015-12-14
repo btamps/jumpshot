@@ -1,6 +1,7 @@
 <template name="MasterLayout">
   <div class="container">
 	<div class="row">
+	{{> loginButtons}}
 	  	<div class="login">
 		  	{{#if currentUser}}
 		  		{{currentUser.profile.name}} - <a data-logout>Sign Out</a>

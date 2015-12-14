@@ -2,12 +2,12 @@ Meteor.startup(function () {
 });
 
 ServiceConfiguration.configurations.upsert(
-  { service: "meteor-developer" },
+  { service: "oauth" },
   {
     $set: {
-      clientId: process.env['ACCOUNTS_METEOR_ID'],
+      clientId: process.env['ACCOUNTS_DRIBBBLE_ID'],
       loginStyle: "popup",
-      secret:  process.env['ACCOUNTS_METEOR_SECRET']
+      secret:  process.env['ACCOUNTS_DRIBBBLE_SECRET']
     }
   }
 );
