@@ -4,7 +4,7 @@ HomeController = RouteController.extend({
   // this.subscribe('items');
   // // add the subscription to the waitlist
   // this.subscribe('item', this.params._id).wait();
-  
+ 
   subscriptions: function() {
   },
   
