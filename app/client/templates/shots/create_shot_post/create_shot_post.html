@@ -1,0 +1,9 @@
+<template name="CreateShotPost">
+  <form action="" class="create-shot">
+  	{{#if currentUser}}
+  		<input type="text" placeholder="Create new shot..." />
+  	{{else}}
+  		<input type="text" placeholder="Sign in to create a shot" readonly />
+  	{{/if}}
+  </form>
+</template>

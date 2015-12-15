@@ -1,0 +1,15 @@
+<template name="ShotsList">
+  {{> CreateShotPost}}
+  <ul class="shots-list">
+  	{{#each shots}}
+  		<li class="shot-post {{isPublishedClass}}">
+  			{{> ShotPost}}
+  		</li>
+	{{else}}
+		<li class="shot-post empty">
+  			No shots yet
+  		</li>
+  	{{/each}}
+  </ul>
+  {{> ShotsCount}}
+</template>
