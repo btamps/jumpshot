@@ -3,7 +3,9 @@
     <input type="checkbox" name="isPublished" {{isPublishedChecked}}/>
   </div>
   <div class="subject">
-  	{{subject}}
+  	{{#linkTo route='shots.detail'}}
+  		{{subject}}
+  	{{/linkTo}}
   </div>
   <div class="action">
   	

@@ -10,3 +10,10 @@ Router.route('/', {
   controller: 'HomeController',
   where: 'client'
 });
+
+Router.route('/shots/:_id', {
+  name: 'shots.detail',
+  controller: 'ShotsController',
+  action: 'detail',
+  where: 'client'
+});
