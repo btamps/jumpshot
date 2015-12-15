@@ -6,6 +6,7 @@ ShotsController = RouteController.extend({
   // this.subscribe('item', this.params._id).wait();
   
   subscriptions: function() {
+    this.subscribe('shot', this.params._id);
   },
   
   // Subscriptions or other things we want to "wait" on. This also
