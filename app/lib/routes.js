@@ -17,3 +17,17 @@ Router.route('/shots/:_id', {
   action: 'detail',
   where: 'client'
 });
+
+Router.route('/shots/:_id/edit', {
+  name: 'shots.edit',
+  controller: 'ShotsController',
+  action: 'edit',
+  where: 'client'
+});
+
+Router.route('/users/:_id', {
+  name: 'usersDetail',
+  controller: 'UsersController',
+  action: 'detail',
+  where: 'client'
+});

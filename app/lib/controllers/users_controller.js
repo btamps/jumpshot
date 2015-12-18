@@ -1,4 +1,4 @@
-ShotsController = RouteController.extend({
+UsersController = RouteController.extend({
   
   // A place to put your subscriptions
   // this.subscribe('items');
@@ -6,7 +6,6 @@ ShotsController = RouteController.extend({
   // this.subscribe('item', this.params._id).wait();
   
   subscriptions: function() {
-    this.subscribe('shot', this.params._id);
   },
   
   // Subscriptions or other things we want to "wait" on. This also
@@ -24,7 +23,6 @@ ShotsController = RouteController.extend({
   // return Posts.findOne({_id: this.params._id});
   
   data: function () {
-    return Shots.findOne({_id: this.params._id});
   },
   
   // You can provide any of the hook options
@@ -47,12 +45,8 @@ ShotsController = RouteController.extend({
   // Example:
   //  action: 'myActionFunction'
   
-  detail: function () {
-    this.render('ShotDetail');
-  },
-  edit: function () {
-    this.state.set('isEditing', true);
-    this.render('ShotDetail');
+  action: function () {
+    this.render();
   },
   onAfterAction: function () {
   },

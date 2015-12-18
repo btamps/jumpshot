@@ -1,5 +1,20 @@
 <template name="ShotDetail">
-  <div class="shot-detail">
-    <h1>Find me in app/client/templates/shots/shot_detail/shot_detail</h1>
-  </div>
+	{{#if get 'isEditing'}}
+		<form class="form edit-shot">
+			<input type="text" name="subject" value="{{subject}}" placeholder="Subject" />
+			<textarea name="description" placeholder="Description">{{description}}</textarea>
+			<input type="submit" class="btn" value="Save" />
+			{{#linkTo route='shots.detail'}}
+				Cancel
+			{{/linkTo}}
+		</form>
+	{{else}}
+	   <h1>{{subject}}</h1>
+	   <p>{{description}}</p>
+	   {{#if isMyShot}}
+	   	{{#linkTo route='shots.edit'}}
+	   		Edit
+	   	{{/linkTo}}
+	   {{/if}}
+	{{/if}}
 </template>
