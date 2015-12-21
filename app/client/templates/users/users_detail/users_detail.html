@@ -1,0 +1,15 @@
+<template name="UsersDetail">
+  {{#contentFor breadcrumbs}}
+    <li class="active">{{profile.name}}</li>
+  {{/contentFor}}
+  <h3>Users</h3>
+  <ul class="list">
+  	{{#each shots}}
+  		<li class="subject {{isDoneClass}}">
+  			{{#linkTo route="shots.detail"}}
+  				{{subject}}
+  			{{/linkTo}}
+  		</li>
+  	{{/each}}
+  </ul>
+</template>

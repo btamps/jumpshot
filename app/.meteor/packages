@@ -24,3 +24,4 @@ accounts-meteor-developer
 service-configuration
 accounts-oauth
 accounts-base
+accounts-google

@@ -26,6 +26,11 @@ Template.ShotDetail.events({
 Template.ShotDetail.helpers({
 	isMyShot: function () {
 		return this.userId ===Meteor.userId();
+	},
+
+	user: function () {
+		var shot = this;
+		return Meteor.users.findOne({_id: shot.userId});		
 	}
 });
 

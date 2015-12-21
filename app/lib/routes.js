@@ -26,7 +26,7 @@ Router.route('/shots/:_id/edit', {
 });
 
 Router.route('/users/:_id', {
-  name: 'usersDetail',
+  name: 'users.detail',
   controller: 'UsersController',
   action: 'detail',
   where: 'client'
